@@ -1,0 +1,131 @@
+body {
+    /* overflow: hidden; */
+}
+.ch1 {
+    background-color: #408d75;
+    height: 100vh;
+}
+
+.ch2 {
+    background-color: #408d75;
+    height: 100vh
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+#main_image {
+    height: 70%;
+    width: 70%;
+}
+
+#zip {
+    height: 70%;
+    width: 70%;
+}
+
+.start-btn {
+    position: absolute;
+    right: 830px;
+    bottom: 320px;
+    opacity: 0%;
+    width: 170px;
+    height: 60px;
+}
+
+
+#zip-code {
+    display: flex;
+    flex-direction:  column;
+    align-items: center;
+    position: relative;
+    bottom: 285px;
+    left: 390px;
+    width: 505px; 
+
+}
+
+input[type=number] {
+    background: #55a347;
+    height: 76px;
+    width: 505px;
+    border: solid;
+    border-color: rgb(86, 86, 86);
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size:35px;
+    
+}
+
+input, select, textarea{
+    color: #ffffcc;
+    text-align: center;
+}
+
+input[type=number]:focus {
+    outline: none !important;
+    box-shadow:0 0 10px rgb(34, 57, 34);
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+#zip-submit-btn { 
+    margin-top: 20px; 
+    background: green;
+    width: 100px; 
+    height: 50px; 
+}
+
+
+.button-37 {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+.u-btn, .d-btn {
+    text-decoration: none;
+    position: relative;
+    font-size: 100px;
+    bottom: -390px; 
+    color:#79ca6b;
+}
+.u-btn {
+    right: 50px; 
+}
+
+.d-btn {
+    right: 40px; 
+}
+
+.u-btn:hover,  .d-btn:hover{
+    color: #ffffcc;
+    transform: scale(1.1);
+}
