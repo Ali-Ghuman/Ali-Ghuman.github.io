@@ -11,52 +11,174 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@300&family=Inter:wght@400;500&family=Poppins:wght@600&display=swap');
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 
 <body id="page-top">
-    <!-- Navigation-->
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <div class="container px-4">
-            <a class="navbar-brand" href="#page-top"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">&uarr;</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">&darr;</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
-    <!-- Header-->
-    <header class="ch1 center">
+
+    <header class="background center">
         <div class="container px-4 text-center" id="main_image_container">
             <img src="../assets/ch1.png" id="main_image"> </img>
-            <h1 class="fw-bolder"></h1>
             <a class="start-btn" href="#ch2-container">Start!</a>
-
         </div>
     </header>
-    <!-- About section-->
-    <section class="ch2 center" id="ch2-container">
+    <section class="background center" id="ch2-container">
         <div class="container px-4">
             <div class="row gx-4 justify-content-center">
                 <img src="../assets/ch3.png" id="zip"> </img>
+                <form id="zip-code">
+                    <input id="zip-code-line" type="number">
+                </form>
+                <a id="next-btn" href="#ch3-container" class="button-37">Next</a>
             </div>
-            <form id="zip-code">
-                <input id="zip-code-line" type="number">
-                <input id="zip-submit-btn" type="submit" href="#services" value="Submit" class="button-37"></a>
-            </form>
         </div>
-        <a class="d-btn" href="#services">&darr;</a>
     </section>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <section class="background center" id="ch3-container">
+        <div class="container px-4">
+            <div class="row gx-4 justify-content-center">
+                <img src="../assets/ch4.png" id="labels"> </img>
+                <form id="nutrition" class="new-food">
+                    <label for="yes">
+                        <input type="checkbox" class="radio" id="yes" name="yes" value="5"
+                            onclick="checkOnlyOne(this.value)">
+                        <span class="nut">Yes</span>
+                    </label>
+                    <label for="maybe">
+                        <input type="checkbox" class="radio" id="maybe" name="maybe" value="3"
+                            onclick="checkOnlyOne(this.value)">
+                        <span class="nut">Maybe</span>
+                    </label>
+                    <label for="no">
+                        <input type="checkbox" class="radio" id="no" name="no" value="1"
+                            onclick="checkOnlyOne(this.value)">
+                        <span class="nut">No</span>
+                    </label>
+                </form>
+                <a id="next-btn" href="#ch4-container" class="button-37">Next</a>
+            </div>
+        </div>
+    </section>
+    <section class="background center" id="ch4-container">
+        <div class="container px-4">
+            <div class="row gx-4 justify-content-center">
+                <img src="../assets/ch5.png" id="meal-label"> </img>
+                <form id="meal" class="new-food">
+                    <label for="yes2">
+                        <input type="checkbox" class="radio" id="yes2" name="yes2" value="5" onclick="checkOnlyOne(this.value)">
+                        <span class="nut">Yes</span>
+                    </label>
+                    <label for="maybe2">
+                        <input type="checkbox" class="radio" id="maybe2" name="maybe2" value="3" onclick="checkOnlyOne(this.value)">
+                        <span class="nut">Maybe</span>
+                    </label>
+                    <label for="no2">
+                        <input type="checkbox" class="radio" id="no2" name="no2" value="1" onclick="checkOnlyOne(this.value)">
+                        <span class="nut">No</span>
+                    </label>
+                </form>
+                <a id="next-btn" href="#ch5-container" class="button-37">Next</a>
+            </div>
+    </section>
+
+    <section class="background center" id="ch5-container">
+        <div class="container px-4">
+            <div class="row gx-4 justify-content-center">
+                <img src="../assets/ch7.png" id="labels"> </img>
+                <form id="labels-checkbox">
+                    <label for="little">
+                        <input type="radio" class="radio" id="little" name="little" value="1"
+                            onclick="checkOnlyOne(this.value)">
+                        <span></span>
+                    </label>
+                    <label for="somewhat">
+                        <input type="radio" class="radio" id="somewhat" name="somewhat" value="2"
+                            onclick="checkOnlyOne(this.value)">
+                        <span></span>
+                    </label>
+                    <label for="well">
+                        <input type="radio" class="radio" id="well" name="well" value="3"
+                            onclick="checkOnlyOne(this.value)">
+                        <span></span>
+                    </label>
+                    <label for="very">
+                        <input type="radio" class="radio" id="very" name="very" value="4"
+                            onclick="checkOnlyOne(this.value)">
+                        <span></span>
+                    </label>
+                </form>
+                <a id="next-btn-labels" href="#ch6-container" class="button-37">Next</a>
+            </div>
+    </section>
+
+    <section class="background center" id="ch6-container">
+        <div class="container px-4">
+            <div class="row gx-4 justify-content-center">
+                <img src="../assets/ch8.png" id="labels"> </img>
+                <form id="newfood-mc" class="new-food">
+                    <label for="super">
+                        <input type="checkbox" class="radio" id="super" name="super" value="5"
+                            onclick="checkOnlyOne(this.value)">
+                        <span>1. Super</span>
+                    </label><br>
+                    <label for="verymc">
+                        <input type="checkbox" class="radio" id="verymc" name="verymc" value="4"
+                            onclick="checkOnlyOne(this.value)">
+                        <span>2. Very</span>
+                    </label><br>
+                    <label for="somewhatmc">
+                        <input type="checkbox" class="radio" id="somewhatmc" name="somewhatmc" value="3"
+                            onclick="checkOnlyOne(this.value)">
+                        <span>3. Somewhat</span>
+                    </label><br>
+                    <label for="unsure">
+                        <input type="checkbox" class="radio" id="unsure" name="unsure" value="2"
+                            onclick="checkOnlyOne(this.value)">
+                        <span>4. Unsure</span>
+                    </label><br>
+                    <label for="notatall">
+                        <input type="checkbox" class="radio" id="notatall" name="notatall" value="1"
+                            onclick="checkOnlyOne(this.value)">
+                        <span>5. Not At All</span>
+                    </label><br>
+                </form>
+                <a id="next-btn-newfoods" href="#ch7-container" class="button-37">Next</a>
+            </div>
+    </section>
+    <section class=" background center" id="ch7-container">
+        <div class="container px-4">
+            <div class="row gx-4 justify-content-center">
+                <img src="../assets/ch9.png" id="labels"> </img>
+                <form id="labels-checkbox2">
+                    <label for="little">
+                        <input type="radio" onclick="checkOnlyOne(this.value)" class="radio" id="little" name="little"
+                            value="1">
+                        <span></span>
+                    </label>
+                    <label for="somewhat">
+                        <input type="radio" class="radio" id="somewhat" name="somewhat" value="2"
+                            onclick="checkOnlyOne(this.value)">
+                        <span></span>
+                    </label>
+                    <label for="well">
+                        <input type="radio" class="radio" id="well" name="well" value="3"
+                            onclick="checkOnlyOne(this.value)">
+                        <span></span>
+                    </label>
+                    <label for="very">
+                        <input type="radio" class="radio" id="very" name="very" value="4"
+                            onclick="checkOnlyOne(this.value)">
+                        <span></span>
+                    </label>
+                </form>
+                <a id="next-btn-labels2" href="#ch8-container" class="button-37" onclick="submitForm()"
+                    target="_blank">Next</a>
+            </div>
+    </section>
+
+
 </body>
 
 </html>
