@@ -1,9 +1,17 @@
-body {
-    /* overflow: hidden; */
+html {
+    width: 1920px;
+    height: 1200px;
+    background-color: #408d75;
 }
+body {
+    width: 1920px;
+    height: 1200px;
+}
+
 .background {
     background-color: #408d75;
-    height: 100vh;
+    width: 1920px;
+    height: 1200px;
 }
 
 .center {
@@ -13,8 +21,8 @@ body {
 }
 
 #main_image {
-    height: 70%;
-    width: 70%;
+    height: 50%;
+    width: 50%;
 }
 
 #next {
@@ -24,11 +32,12 @@ body {
 
 .start-btn {
     position: absolute;
-    left: 626px;
-    bottom: 285px;
-    opacity: 0%;
-    width: 170px;
+    left: 1006px;
+    bottom: -197px;
+    /* opacity: 0%; */
+    width: 240px;
     height: 60px;
+    border: 1px solid;
 }
 
 #next-code {
@@ -51,8 +60,8 @@ input[type="number"] {
     font-weight: 600;
     font-size: 35px;
     position: absolute;
-    left: 335px;
-    top: 1220px;
+    left: 708px;
+    top: 1750px;
 }
 
 input,
@@ -72,11 +81,12 @@ input::-webkit-inner-spin-button {
     display: none;
 }
 
+
 #next-btn,
 #next-btn-labels,
 #next-btn-newfoods,
 #next-btn-labels2 {
-    margin-top: 0px;
+    margin-top: 50px; 
     background: green;
     width: 100px;
     height: 50px;
@@ -228,8 +238,8 @@ input::-webkit-inner-spin-button {
     display: flex;
     width: 100%;
     padding-right: 150px;
-    top: 3871px;
-    left: 110px;
+    top: 5501px;
+    left: 610px;
     height: 18px;
 }
 
@@ -260,8 +270,8 @@ input::-webkit-inner-spin-button {
     font-size: 14px;
     border-radius: 4px;
     padding: 13px 30px;
-    margin-right: 10px;
-    min-width: 225px;
+    margin-right: 40px;
+    min-width: 130px;
 }
 
 #labels-checkbox label:hover span,
@@ -293,7 +303,8 @@ input::-webkit-inner-spin-button {
 }
 
 #newfood-mc,
-#nutrition, #meal {
+#nutrition,
+#meal {
     font-family: "Inter", sans-serif;
     color: #fefeca;
     font-size: 30px;
@@ -302,28 +313,29 @@ input::-webkit-inner-spin-button {
 }
 
 #newfood-mc {
-    top: 4340px;
-    left: 680px;
+    top: 6495px;
+    left: 1050px;
+    font-size: 35px; 
 }
 
 #nutrition {
-    top: 2183px;
-    left: 300px;
+    top: 3103px;
+    left: 668px;
     font-size: 60px;
-    font-weight:500;
-    margin-right:80px;
+    font-weight: 500;
+    margin-right: 80px;
 }
 
 #meal {
-    top: 2983px;
-    left: 300px;
+    top: 4293px;
+    left: 668px;
     font-size: 60px;
-    font-weight:500;
-    margin-right:80px;
+    font-weight: 500;
+    margin-right: 80px;
 }
 
-.nut  {
-    padding-right: 50px;  
+.nut {
+    padding-right: 50px;
 }
 
 .new-food {
@@ -370,8 +382,8 @@ input::-webkit-inner-spin-button {
     display: flex;
     width: 100%;
     padding-right: 150px;
-    top: 5518px;
-    left: 110px;
+    top: 7910px;
+    left: 610px;
     height: 18px;
 }
 
@@ -402,8 +414,8 @@ input::-webkit-inner-spin-button {
     font-size: 14px;
     border-radius: 4px;
     padding: 13px 30px;
-    margin-right: 10px;
-    min-width: 225px;
+    margin-right: 42px;
+    min-width: 130px;
 }
 
 #labels-checkbox2 label:hover span,
