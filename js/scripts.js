@@ -61,3 +61,27 @@ function checkOnlyOne(b) {
         if (x[i].value != b) x[i].checked = false;
     }
 }
+
+
+document.getElementById("zip-btn").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevents the default behavior of the button
+    printZipCode(); // Calls the printZipCode function
+  });
+  
+
+function printZipCode() {
+    var zipCode = document.getElementById("zip-code-line").value; // Retrieves the value of the input field
+    var zipElement = document.createElement("p"); // Creates a new <p> element
+    zipElement.innerHTML = "You entered zip code " + zipCode; // Inserts the zip code into the <p> element
+    document.getElementById("ch2-container").appendChild(zipElement); // Inserts the <p> element into the HTML code
+  }
+
+function showSelectedAnswer() {
+    var selected = document.querySelectorAll('input[name="nutrition_comfort"]:checked');
+    var answer = "";
+    for (var i = 0; i < selected.length; i++) {
+        answer += selected[i].value + " ";
+    }
+    document.getElementById("selected-answer").innerHTML = "Selected answer: " + answer;
+}
+

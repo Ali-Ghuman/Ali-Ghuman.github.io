@@ -25,6 +25,8 @@
             <a class="start-btn" href="#ch2-container">Start!</a>
         </div>
     </header>
+
+    <!---------------------------------------------------------------------ZIP CODE--------------------------------------------------------------------->
     <section class="background center" id="ch2-container">
         <div class="container px-4">
             <div class="row gx-4 justify-content-center">
@@ -32,35 +34,53 @@
                 <form id="zip-code">
                     <input id="zip-code-line" type="number">
                 </form>
-                <a id="next-btn" href="#ch3-container" class="button-37">Next</a>
+                <a id="zip-btn" href="#ch3-container" class="button-37">Next</a>
             </div>
         </div>
     </section>
+
+
+    <!---------------------------------------------------------------------WISH TO UNDERSTAND NUTRITION LABELS--------------------------------------------------------------------->
     <section class="background center" id="ch3-container">
         <div class="container px-4">
             <div class="row gx-4 justify-content-center">
                 <img src="../assets/ch4.png" id="labels"> </img>
+
                 <form id="nutrition" class="new-food">
+
+                    <!-- YES -->
                     <label for="yes">
-                        <input type="checkbox" class="radio" id="yes" name="yes" value="5"
+                        <input type="checkbox" class="radio" id="yes" name="nutrition_comfort" value="5"
                             onclick="checkOnlyOne(this.value)">
                         <span class="nut">Yes</span>
                     </label>
+
+                    <!-- MAYBE -->
                     <label for="maybe">
-                        <input type="checkbox" class="radio" id="maybe" name="maybe" value="3"
+                        <input type="checkbox" class="radio" id="maybe" name="nutrition_comfort" value="3"
                             onclick="checkOnlyOne(this.value)">
                         <span class="nut">Maybe</span>
                     </label>
+
+                    <!-- NO -->
                     <label for="no">
-                        <input type="checkbox" class="radio" id="no" name="no" value="1"
+                        <input type="checkbox" class="radio" id="no" name="nutrition_comfort" value="1"
                             onclick="checkOnlyOne(this.value)">
                         <span class="nut">No</span>
                     </label>
+
                 </form>
-                <a id="next-btn" href="#ch4-container" class="button-37">Next</a>
+
+                <p id="selected-answer"></p>
+                <a id="next-btn" href="#ch4-container" class="button-37" onclick="showSelectedAnswer()">Next</a>
+
             </div>
         </div>
     </section>
+
+      
+    <!---------------------------------------------------------------------MAKE MEALS MORE NUTRITIOUS--------------------------------------------------------------------->
+
     <section class="background center" id="ch4-container">
         <div class="container px-4">
             <div class="row gx-4 justify-content-center">
@@ -82,6 +102,8 @@
                 <a id="next-btn" href="#ch5-container" class="button-37">Next</a>
             </div>
     </section>
+
+    <!---------------------------------------------------------------------COMFORTABLE WITH NUTRITION LABELS--------------------------------------------------------------------->
 
     <section class="background center" id="ch5-container">
         <div class="container px-4">
@@ -112,6 +134,8 @@
                 <a id="next-btn-labels" href="#ch6-container" class="button-37">Next</a>
             </div>
     </section>
+
+    <!---------------------------------------------------------------------LIKE TO INCLUDE NEW FOODS IN DIET?--------------------------------------------------------------------->
 
     <section class="background center" id="ch6-container">
         <div class="container px-4">
@@ -147,6 +171,8 @@
                 <a id="next-btn-newfoods" href="#ch7-container" class="button-37">Next</a>
             </div>
     </section>
+
+
     <section class=" background center" id="ch7-container">
         <div class="container px-4">
             <div class="row gx-4 justify-content-center">
