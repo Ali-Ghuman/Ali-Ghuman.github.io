@@ -144,7 +144,7 @@ function onSubmit(){
     const selectedNeighborhood = neighborhoodSelect.value;
 
     console.log(selectedNeighborhood)
-    
+
     var nutrition_wish_understand = Number(document.querySelectorAll('input[name="nutrition_wish_understand"]:checked')[0].value);
     var nutritious_meals = Number(document.querySelectorAll('input[name="nutritious_meals"]:checked')[0].value);
     var nutrition_comfort = Number(document.querySelectorAll('input[name="nutrition_comfort"]:checked')[0].value);
@@ -160,32 +160,50 @@ function onSubmit(){
     shopping_tour = shopping_tour + new_food + fruit_vege
 
     console.log(`BB ${brighter_bites} |  NC ${nutrition_course} | CC ${cooking_class} | ST ${shopping_tour}`)
-    
+    // console.log(`BB ${eval("brighter_bites")} |  NC ${window["nutrition_course"]} | CC ${window["cooking_class"]} | ST ${window["shopping_tour"]}`)
+
     // Check which variable has the largest value
     let largest = "brighter_bites";
     if (nutrition_course > brighter_bites) {
     largest = "nutrition_course";
     }
-    if (cooking_class > window[largest]) {
+    if (cooking_class > eval(largest)) {
     largest = "cooking_class";
     }
-    if (shopping_tour > window[largest]) {
+    if (shopping_tour > eval(largest)) {
     largest = "shopping_tour";
     }
-    if (texts > window[largest]) {
+    if (texts > eval(largest)) {
     largest = "texts";
     }
 
     console.log("The variable with the largest value is:", largest);
 
+    // Display the correct images
+    // Get the image element
+    let imgElement = document.getElementById("survey-result");
+    // Use a switch statement to display different images based on the variable value
+    switch (largest) {
+        case "brighter_bites":
+            imgElement.src = "../assets/ch1.png";
+            break;
+        case "nutrition_course":
+            imgElement.src = "../assets/ch2.png";
+            break;
+        case "cooking_class":
+            imgElement.src = "../assets/ch3.png";
+            break;
+        case "shopping_tour":
+            imgElement.src = "../assets/ch4.png";
+            break;
+        case "texts":
+            imgElement.src = "../assets/ch5.png";
+            break; 
 
-    /*
-    for (var i = 0; i < nutrition_comfort_little.length; i++) {
-        answer += nutrition_comfort_little[i].value + " ";
-    }
-
-    document.getElementById("selected-answer").innerHTML = "Selected answer: " + answer;
-    */
+        default:
+            imgElement.src = "../assets/ch9.png";
+  }
+  
 }
 
 function generate_checklist(){
