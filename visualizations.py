@@ -69,6 +69,8 @@ def plot_inequality(community_info, borough_info, district_name = "East Harlem")
 
     # plt.suptitle(f"Food inequality in {district}", x = 0.52, y = 1.01, fontname = "Hiragino Sans", fontweight="bold", color = '#fee4ca', fontsize = 20)
     plt.text(1 , 3.71, "Food Inequality in ", fontname = "Hiragino Sans", fontweight="bold", color = '#fee4ca', fontsize = 20)
-    plt.text(51 , 3.71, f"{district}", fontname = "Hiragino Sans", fontweight="bold", color = '#00d447', fontsize = 20)
+    plt.text(53 , 3.71, f"{district}", fontname = "Hiragino Sans", fontweight="bold", color = '#00d447', fontsize = 20)
 
-    plt.show()
+    
+    plt.savefig(f'assets/neigborhood-plots/{borough.values[0]}: {district_name}.png', bbox_inches = 'tight')
+    # plt.show()
