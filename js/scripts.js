@@ -141,9 +141,13 @@ function showSelectedAnswer() {
 
 function onSubmit(){
     const neighborhoodSelect = document.querySelector('#neighborhood-select');
-    const selectedNeighborhood = neighborhoodSelect.value;
-
+    var selectedNeighborhood = neighborhoodSelect.value;
     console.log(selectedNeighborhood)
+    console.log('Brooklyn: Borough Park')
+
+    // Neighborhod image;
+    let neighborhoodImage = document.getElementById("neighborhood-result")
+    neighborhoodImage.src = 'assets/neigborhood-plots/Brooklyn: Borough Park.png'
 
     var nutrition_wish_understand = Number(document.querySelectorAll('input[name="nutrition_wish_understand"]:checked')[0].value);
     var nutritious_meals = Number(document.querySelectorAll('input[name="nutritious_meals"]:checked')[0].value);
@@ -179,7 +183,10 @@ function onSubmit(){
 
     console.log("The variable with the largest value is:", largest);
 
+
+
     // Display the correct images
+
     // Get the image element
     let imgElement = document.getElementById("survey-result");
     // Use a switch statement to display different images based on the variable value
