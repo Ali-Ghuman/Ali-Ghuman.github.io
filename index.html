@@ -234,7 +234,20 @@
         </section>
     
     <p id="selected-answer"></p>
+    <button onclick="topFunction()">Refresh and go to top</button>
 
+    <script>
+        function topFunction() {
+            document.getElementById("nutrition").reset(); 
+            document.getElementById("meal").reset(); 
+            document.getElementById("labels-checkbox").reset(); 
+            document.getElementById("newfood-mc").reset(); 
+            document.getElementById("labels-checkbox2").reset(); 
+            const section2 = document.getElementById("page-top");
+            section2.scrollIntoView({ behavior: "smooth" });
+
+        }
+    </script>
 </body>
 
 </html>
