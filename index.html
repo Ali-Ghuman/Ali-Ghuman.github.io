@@ -43,29 +43,28 @@
                 <form id="nutrition" class="new-food">
 
                     <!-- YES -->
-                    <label for="yes">
-                        <input type="checkbox" class="radio" id="yes" name="nutrition_comfort" value="5"
+                    <label for="nutrition_wish_understand_yes">
+                        <input type="checkbox" class="radio" id="nutrition_wish_understand_yes" name="nutrition_wish_understand" value="1"
                             onclick="checkOnlyOne(this.value)">
                         <span class="nut">Yes</span>
                     </label>
 
                     <!-- MAYBE -->
-                    <label for="maybe">
-                        <input type="checkbox" class="radio" id="maybe" name="nutrition_comfort" value="3"
+                    <label for="nutrition_wish_understand_maybe">
+                        <input type="checkbox" class="radio" id="nutrition_wish_understand_maybe" name="nutrition_wish_understand" value="0"
                             onclick="checkOnlyOne(this.value)">
                         <span class="nut">Maybe</span>
                     </label>
 
                     <!-- NO -->
-                    <label for="no">
-                        <input type="checkbox" class="radio" id="no" name="nutrition_comfort" value="1"
+                    <label for="nutrition_wish_understand_no">
+                        <input type="checkbox" class="radio" id="nutrition_wish_understand_no" name="nutrition_wish_understand" value="-1"
                             onclick="checkOnlyOne(this.value)">
                         <span class="nut">No</span>
                     </label>
 
                 </form>
 
-                <p id="selected-answer"></p>
                 <a id="next-btn" href="#ch4-container" class="button-37" onclick="showSelectedAnswer()">Next</a>
 
             </div>
@@ -73,57 +72,66 @@
     </section>
 
       
-    <!---------------------------------------------------------------------MAKE MEALS MORE NUTRITIOUS--------------------------------------------------------------------->
+    <!--------------------------------------------------------------------- WANT TO MAKE MEALS MORE NUTRITIOUS--------------------------------------------------------------------->
 
     <section class="background center" id="ch4-container">
         <div class="container px-4">
             <div class="row gx-4 justify-content-center">
                 <img src="../assets/ch5.png" id="meal-label"> </img>
                 <form id="meal" class="new-food">
-                    <label for="yes2">
-                        <input type="checkbox" class="radio" id="yes2" name="yes2" value="5" onclick="checkOnlyOne(this.value)">
+
+                    <label for="nutritious_meals_yes">
+                        <input type="checkbox" class="radio" id="nutritious_meals_yes" name="nutritious_meals" value="1" onclick="checkOnlyOne(this.value)">
                         <span class="nut">Yes</span>
                     </label>
-                    <label for="maybe2">
-                        <input type="checkbox" class="radio" id="maybe2" name="maybe2" value="3" onclick="checkOnlyOne(this.value)">
+
+                    <label for="nutritious_meals_maybe">
+                        <input type="checkbox" class="radio" id="nutritious_meals_maybe" name="nutritious_meals" value="0" onclick="checkOnlyOne(this.value)">
                         <span class="nut">Maybe</span>
                     </label>
-                    <label for="no2">
-                        <input type="checkbox" class="radio" id="no2" name="no2" value="1" onclick="checkOnlyOne(this.value)">
+
+                    <label for="nutritious_meals_no">
+                        <input type="checkbox" class="radio" id="nutritious_meals_no" name="nutritious_meals value="-1" onclick="checkOnlyOne(this.value)">
                         <span class="nut">No</span>
                     </label>
+
                 </form>
                 <a id="next-btn" href="#ch5-container" class="button-37">Next</a>
             </div>
     </section>
 
-    <!---------------------------------------------------------------------COMFORTABLE WITH NUTRITION LABELS--------------------------------------------------------------------->
+    <!---------------------------------------------------------------------COMFORT WITH NUTRITION LABELS--------------------------------------------------------------------->
 
     <section class="background center" id="ch5-container">
         <div class="container px-4">
             <div class="row gx-4 justify-content-center">
                 <img src="../assets/ch7.png" id="labels"> </img>
                 <form id="labels-checkbox">
-                    <label for="little">
-                        <input type="radio" class="radio" id="little" name="little" value="1"
+
+                    <label for="nutrition_comfort_little">
+                        <input type="radio" class="radio" id="nutrition_comfort_little" name="nutrition_comfort_little" value="2"
                             onclick="checkOnlyOne(this.value)">
                         <span></span>
                     </label>
-                    <label for="somewhat">
-                        <input type="radio" class="radio" id="somewhat" name="somewhat" value="2"
+
+                    <label for="nutrition_comfort_somewhat">
+                        <input type="radio" class="radio" id="nutrition_comfort_somewhat" name="nutrition_comfort_somewhat" value="1"
                             onclick="checkOnlyOne(this.value)">
                         <span></span>
                     </label>
-                    <label for="well">
-                        <input type="radio" class="radio" id="well" name="well" value="3"
+
+                    <label for="nutrition_comfort_well">
+                        <input type="radio" class="radio" id="nutrition_comfort_well" name="nutrition_comfort_well" value="0"
                             onclick="checkOnlyOne(this.value)">
                         <span></span>
                     </label>
-                    <label for="very">
-                        <input type="radio" class="radio" id="very" name="very" value="4"
+
+                    <label for="nutrition_comfort_very">
+                        <input type="radio" class="radio" id="nutrition_comfort_very" name="nutrition_comfort_very" value="-1"
                             onclick="checkOnlyOne(this.value)">
                         <span></span>
                     </label>
+
                 </form>
                 <a id="next-btn-labels" href="#ch6-container" class="button-37">Next</a>
             </div>
@@ -136,53 +144,76 @@
             <div class="row gx-4 justify-content-center">
                 <img src="../assets/ch8.png" id="labels"> </img>
                 <form id="newfood-mc" class="new-food">
-                    <label for="super">
-                        <input type="checkbox" class="radio" id="super" name="super" value="5"
+
+                    <label for="new_food_yes">
+                        <input type="checkbox" class="radio" id="new_food_yes" name="new_food_yes" value="1"
                             onclick="checkOnlyOne(this.value)">
                         <span>Yes</span>
                     </label><br>
-                    <label for="verymc">
-                        <input type="checkbox" class="radio" id="verymc" name="verymc" value="4"
+
+                    <label for="new_food_no">
+                        <input type="checkbox" class="radio" id="new_food_no" name="new_food_no" value="-1"
                             onclick="checkOnlyOne(this.value)">
                         <span>No</span>
                     </label><br>
+
                 </form>
                 <a id="next-btn-newfoods" href="#ch7-container" class="button-37">Next</a>
             </div>
     </section>
 
+    <!---------------------------------------------------------------------HOW OFTEN DO YOU EAT FRUITS + VEGES?--------------------------------------------------------------------->
 
     <section class=" background center" id="ch7-container">
         <div class="container px-4">
             <div class="row gx-4 justify-content-center">
                 <img src="../assets/ch9.png" id="labels"> </img>
                 <form id="labels-checkbox2">
-                    <label for="little">
-                        <input type="radio" onclick="checkOnlyOne(this.value)" class="radio" id="little" name="little"
-                            value="1">
+
+                    <label for="fruit_vege_rarely">
+                        <input type="radio" onclick="checkOnlyOne(this.value)" class="radio" id="fruit_vege_rarely" name="fruit_vege_rarely"
+                            value="2">
                         <span></span>
                     </label>
-                    <label for="somewhat">
-                        <input type="radio" class="radio" id="somewhat" name="somewhat" value="2"
+
+                    <label for="fruit_vege_somewhat">
+                        <input type="radio" class="radio" id="fruit_vege_somewhat" name="fruit_vege_somewhat" value="1"
                             onclick="checkOnlyOne(this.value)">
                         <span></span>
                     </label>
-                    <label for="well">
-                        <input type="radio" class="radio" id="well" name="well" value="3"
+
+                    <label for="fruit_vege_well">
+                        <input type="radio" class="radio" id="fruit_vege_well" name="fruit_vege_well" value="0"
                             onclick="checkOnlyOne(this.value)">
                         <span></span>
                     </label>
-                    <label for="very">
-                        <input type="radio" class="radio" id="very" name="very" value="4"
+
+                    <label for="fruit_vege_very">
+                        <input type="radio" class="radio" id="fruit_vege_very" name="fruit_vege_very" value="-1"
                             onclick="checkOnlyOne(this.value)">
                         <span></span>
                     </label>
+
                 </form>
-                <a id="next-btn-labels2" href="#ch8-container" class="button-37" onclick="submitForm()"
-                    target="_blank">Next</a>
+                <a id="submit-btn" href="#ch8-container" class="button-37"><b>SUBMIT</b></a>
             </div>
     </section>
 
+
+    <section class=" background center" id="ch8-container">
+        <div class="container px-4">
+            <div class="row gx-4 justify-content-center">
+                <div class="column">
+                    <img src="../assets/ch9.png" id="labels" style="width:100%"> </img>
+                </div>
+                <div class="column">
+                    <img src="../assets/ch9.png" id="labels" style="width:100%"> </img>
+                </div>            
+            </div>
+        </section>
+    
+    <p id="selected-answer"></p>
+    <a id="submit-btn" href="#ch8-container" class="button-37" onclick="submitForm()" target="_blank"><b>SUBMIT</b></a>
 
 </body>
 

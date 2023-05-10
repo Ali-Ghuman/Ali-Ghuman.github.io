@@ -49,7 +49,7 @@ submitForm = function () {
     document.getElementById("newfood-mc").submit();
     document.getElementById("labels-checkbox2").submit();
     document.getElementById("zip-code").submit();
-    document.getElementById("nutrition").submit();
+    document.getElementById("nutrition_comfort").submit();
 }
 
 function checkOnlyOne(b) {
@@ -77,7 +77,7 @@ function printZipCode() {
   }
 
 function showSelectedAnswer() {
-    var selected = document.querySelectorAll('input[name="nutrition_comfort"]:checked');
+    var selected = document.querySelectorAll('input[name="nutrition_wish_understand"]:checked');
     var answer = "";
     for (var i = 0; i < selected.length; i++) {
         answer += selected[i].value + " ";
@@ -85,3 +85,7 @@ function showSelectedAnswer() {
     document.getElementById("selected-answer").innerHTML = "Selected answer: " + answer;
 }
 
+function onSubmit(){
+    var nutrition_wish_understand = document.querySelectorAll('input[name="nutrition_wish_understand"]:checked');
+    var nutritious_meals_yes = document.querySelectorAll('input[name="nutritious_meals"]:checked');
+}
