@@ -25,12 +25,31 @@
         <div class="container px-4">
             <div class="row gx-4 justify-content-center">
                 <img src="../assets/ch3.png" id="zip"> </img>
+                <script>
+                    generate_checklist()
+                </script>
                 <form id="zip-code">
                     <input id="zip-code-line" type="number">
                 </form>
+
                 <a id="next-btn" href="#ch3-container" class="button-37">Next</a>
             </div>
+            <!--
+            <select id="boroughs">
+                <option value="" disabled selected>Select a borough</option>
+                <option value="manhattan">Manhattan</option>
+                <option value="brooklyn">Brooklyn</option>
+                <option value="queens">Queens</option>
+                <option value="bronx">Bronx</option>
+                <option value="staten-island">Staten Island</option>
+              </select>
+            
+              <select id="names-dropdown">
+                <option value="">Select a borough</option>
+            </select>
+            -->
         </div>
+
     </section>
 
 
@@ -45,21 +64,21 @@
                     <!-- YES -->
                     <label for="nutrition_wish_understand_yes">
                         <input type="checkbox" class="radio" id="nutrition_wish_understand_yes" name="nutrition_wish_understand" value="1"
-                            onclick="checkOnlyOne(this.value)">
+                            onclick="checkOnlyOne(this.value, this.name)">
                         <span class="nut">Yes</span>
                     </label>
 
                     <!-- MAYBE -->
                     <label for="nutrition_wish_understand_maybe">
                         <input type="checkbox" class="radio" id="nutrition_wish_understand_maybe" name="nutrition_wish_understand" value="0"
-                            onclick="checkOnlyOne(this.value)">
+                            onclick="checkOnlyOne(this.value, this.name)">
                         <span class="nut">Maybe</span>
                     </label>
 
                     <!-- NO -->
                     <label for="nutrition_wish_understand_no">
                         <input type="checkbox" class="radio" id="nutrition_wish_understand_no" name="nutrition_wish_understand" value="-1"
-                            onclick="checkOnlyOne(this.value)">
+                            onclick="checkOnlyOne(this.value, this.name)">
                         <span class="nut">No</span>
                     </label>
 
@@ -81,17 +100,17 @@
                 <form id="meal" class="new-food">
 
                     <label for="nutritious_meals_yes">
-                        <input type="checkbox" class="radio" id="nutritious_meals_yes" name="nutritious_meals" value="1" onclick="checkOnlyOne(this.value)">
+                        <input type="checkbox" class="radio" id="nutritious_meals_yes" name="nutritious_meals" value="1" onclick="checkOnlyOne(this.value, this.name)">
                         <span class="nut">Yes</span>
                     </label>
 
                     <label for="nutritious_meals_maybe">
-                        <input type="checkbox" class="radio" id="nutritious_meals_maybe" name="nutritious_meals" value="0" onclick="checkOnlyOne(this.value)">
+                        <input type="checkbox" class="radio" id="nutritious_meals_maybe" name="nutritious_meals" value="0" onclick="checkOnlyOne(this.value, this.name)">
                         <span class="nut">Maybe</span>
                     </label>
 
                     <label for="nutritious_meals_no">
-                        <input type="checkbox" class="radio" id="nutritious_meals_no" name="nutritious_meals value="-1" onclick="checkOnlyOne(this.value)">
+                        <input type="checkbox" class="radio" id="nutritious_meals_no" name="nutritious_meals" value="-1" onclick="checkOnlyOne(this.value, this.name)">
                         <span class="nut">No</span>
                     </label>
 
@@ -110,25 +129,25 @@
 
                     <label for="nutrition_comfort_little">
                         <input type="radio" class="radio" id="nutrition_comfort_little" name="nutrition_comfort" value="2"
-                            onclick="checkOnlyOne(this.value)">
+                            onclick="checkOnlyOne(this.value, this.name)">
                         <span></span>
                     </label>
 
                     <label for="nutrition_comfort_somewhat">
                         <input type="radio" class="radio" id="nutrition_comfort_somewhat" name="nutrition_comfort" value="1"
-                            onclick="checkOnlyOne(this.value)">
+                            onclick="checkOnlyOne(this.value, this.name)">
                         <span></span>
                     </label>
 
                     <label for="nutrition_comfort_well">
                         <input type="radio" class="radio" id="nutrition_comfort_well" name="nutrition_comfort" value="0"
-                            onclick="checkOnlyOne(this.value)">
+                            onclick="checkOnlyOne(this.value, this.name)">
                         <span></span>
                     </label>
 
                     <label for="nutrition_comfort_very">
                         <input type="radio" class="radio" id="nutrition_comfort_very" name="nutrition_comfort" value="-1"
-                            onclick="checkOnlyOne(this.value)">
+                            onclick="checkOnlyOne(this.value, this.name)">
                         <span></span>
                     </label>
 

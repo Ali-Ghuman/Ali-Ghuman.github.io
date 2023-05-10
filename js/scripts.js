@@ -44,6 +44,60 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+// define an async function to read the CSV file
+/*
+async function readCSV(url) {
+    const response = await fetch(url);
+    const data = await response.text();
+    const rows = data.split("\n").slice(1);
+    const result = rows.map(row => {
+      const columns = row.split(",");
+      return {
+        id: columns[0],
+        borough: columns[1],
+        name: columns[2]
+      };
+    });
+    return result;
+  }
+  
+  // define the URL of the CSV file
+  const csvUrl = "data/2022-chp-pud.csv";
+  
+  // get the select element from the HTML
+  const dropdown = document.getElementById("names-dropdown");
+  
+  // call the readCSV function and generate the dropdown options
+  readCSV(csvUrl).then(data => {
+    // create an object to store options for each borough
+    const optionsByBorough = {};
+  
+    // loop through the data and add each name to its corresponding borough
+    data.forEach(row => {
+      if (!optionsByBorough[row.borough]) {
+        optionsByBorough[row.borough] = [];
+      }
+      optionsByBorough[row.borough].push(row.name);
+    });
+  
+    // generate the dropdown options for each borough
+    Object.keys(optionsByBorough).forEach(borough => {
+      const optionGroup = document.createElement("optgroup");
+      optionGroup.label = borough;
+  
+      optionsByBorough[borough].forEach(name => {
+        const option = document.createElement("option");
+        option.value = name;
+        option.text = borough + " " + name;
+        optionGroup.appendChild(option);
+      });
+  
+      dropdown.appendChild(optionGroup);
+    });
+  });
+*/
+
+
 submitForm = function () {
     document.getElementById("labels-checkbox").submit();
     document.getElementById("newfood-mc").submit();
@@ -86,28 +140,44 @@ function showSelectedAnswer() {
 }
 
 function onSubmit(){
-    //var nutrition_wish_understand = Number(document.querySelectorAll('input[name="nutrition_wish_understand"]:checked')[0].value);
-    //var nutritious_meals_yes = Number(document.querySelectorAll('input[name="nutritious_meals_yes"]:checked')[0].value);
-    
-    //const sub_nutrition_comfort = Number(document.querySelectorAll('input[name="nutrition_comfort"]:checked')[0].value);
-    //console.log(sub_nutrition_comfort)
+    const neighborhoodSelect = document.querySelector('#neighborhood-select');
+    const selectedNeighborhood = neighborhoodSelect.value;
 
-    var sub_new_food = document.querySelectorAll('input[name="new_food"]:checked');
-    console.log(sub_new_food);
-    // const new_food = sub_new_food[0].value
-    var sub_fruit_vege = document.querySelectorAll('input[name="fruit_vege"]:checked');
-    console.log(sub_fruit_vege);
-    console.log(new_food)
-    /*
+    console.log(selectedNeighborhood)
+    
+    var nutrition_wish_understand = Number(document.querySelectorAll('input[name="nutrition_wish_understand"]:checked')[0].value);
+    var nutritious_meals = Number(document.querySelectorAll('input[name="nutritious_meals"]:checked')[0].value);
+    var nutrition_comfort = Number(document.querySelectorAll('input[name="nutrition_comfort"]:checked')[0].value);
+    var new_food = Number(document.querySelectorAll('input[name="new_food"]:checked')[0].value);
+    var fruit_vege = Number(document.querySelectorAll('input[name="fruit_vege"]:checked')[0].value);
+
+    console.log(nutrition_wish_understand, nutritious_meals, nutrition_comfort, new_food, fruit_vege)
+
     let brighter_bites = 0, nutrition_course = 0, cooking_class = 0, shopping_tour = 0, texts = 0;
-    brighter_bites = brighter_bites + nutritious_meals_yes
-    nutrition_course = nutrition_course + nutrition_wish_understand + nutrition_comfort_little
+    brighter_bites = brighter_bites + nutritious_meals
+    nutrition_course = nutrition_course + nutrition_wish_understand + nutrition_comfort
     cooking_class = cooking_class + new_food
     shopping_tour = shopping_tour + new_food + fruit_vege
 
     console.log(`BB ${brighter_bites} |  NC ${nutrition_course} | CC ${cooking_class} | ST ${shopping_tour}`)
-    */
-    var answer = "";
+    
+    // Check which variable has the largest value
+    let largest = "brighter_bites";
+    if (nutrition_course > brighter_bites) {
+    largest = "nutrition_course";
+    }
+    if (cooking_class > window[largest]) {
+    largest = "cooking_class";
+    }
+    if (shopping_tour > window[largest]) {
+    largest = "shopping_tour";
+    }
+    if (texts > window[largest]) {
+    largest = "texts";
+    }
+
+    console.log("The variable with the largest value is:", largest);
+
 
     /*
     for (var i = 0; i < nutrition_comfort_little.length; i++) {
@@ -116,4 +186,38 @@ function onSubmit(){
 
     document.getElementById("selected-answer").innerHTML = "Selected answer: " + answer;
     */
+}
+
+function generate_checklist(){
+
+    const options = ["Manhattan:	Greenwich Village and Soho","Manhattan:	Lower East Side and Chinatown","Manhattan:	Clinton and Chelsea","Manhattan:	Midtown","Manhattan:	Stuyvesant Town and Turtle Bay","Manhattan:	Upper West Side","Manhattan:	Upper East Side","Manhattan:	Morningside Heights and Hamilton Heights","Manhattan:	Central Harlem","Manhattan:	East Harlem","Manhattan:	Washington Heights and Inwood","Bronx:	Mott Haven and Melrose","Bronx:	Hunts Point and Longwood","Bronx:	Morrisania and Crotona","Bronx:	Highbridge and Concourse","Bronx:	Fordham and University Heights","Bronx:	Belmont and East Tremont","Bronx:	Kingsbridge Heights and Bedford","Bronx:	Riverdale and Fieldston","Bronx:	Parkchester and Soundview","Bronx:	Throgs Neck and Co-op City","Bronx:	Morris Park and Bronxdale","Bronx:	Williamsbridge and Baychester","Brooklyn:	Greenpoint and Williamsburg","Brooklyn:	Fort Greene and Brooklyn Heights","Brooklyn:	Bedford Stuyvesant","Brooklyn:	Bushwick","Brooklyn:	East New York and Starrett City","Brooklyn:	Park Slope and Carroll Gardens","Brooklyn:	Sunset Park","Brooklyn:	Crown Heights and Prospect Heights","Brooklyn:	South Crown Heights and Lefferts Gardens","Brooklyn:	Bay Ridge and Dyker Heights","Brooklyn:	Bensonhurst","Brooklyn:	Borough Park","Brooklyn:	Coney Island","Brooklyn:	Flatbush and Midwood","Brooklyn:	Sheepshead Bay","Brooklyn:	Brownsville","Brooklyn:	East Flatbush","Brooklyn:	Flatlands and Canarsie","Queens:	Long Island City and Astoria","Queens:	Woodside and Sunnyside","Queens:	Jackson Heights","Queens:	Elmhurst and Corona","Queens:	Ridgewood and Maspeth","Queens:	Rego Park and Forest Hills","Queens:	Flushing and Whitestone","Queens:	Hillcrest and Fresh Meadows","Queens:	Kew Gardens and Woodhaven","Queens:	South Ozone Park and Howard Beach","Queens:	Bayside and Little Neck","Queens:	Jamaica and Hollis","Queens: Queens Village","Queens:	Rockaway and Broad Channel","Staten Island:	St. George and Stapleton","Staten Island:	South Beach and Willowbrook","Staten Island:	Tottenville and Great Kills"]
+    // Create select element
+    const select = document.createElement("select");
+
+    // Create default option
+    const defaultOption = document.createElement("option");
+    defaultOption.text = "Select a neighborhood";
+    defaultOption.selected = true;
+    defaultOption.disabled = true;
+    select.appendChild(defaultOption);
+
+    // Create options from array
+    for (let i = 0; i < options.length; i++) {
+        const option = document.createElement("option");
+        option.text = options[i];
+        select.appendChild(option);
+    }
+
+    select.id = "neighborhood-select";
+    select.name = "neighborhood-select";
+
+    // Add select element to HTML
+    document.body.appendChild(select);
+
+
+    select.addEventListener("change", (event) => {
+        const selectedOption = event.target.value;
+        console.log(selectedOption); // Output the selected option
+    });
+      
 }
