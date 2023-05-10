@@ -52,13 +52,13 @@ submitForm = function () {
     document.getElementById("nutrition_comfort").submit();
 }
 
-function checkOnlyOne(b) {
-    console.log(b)
-    var x = document.getElementsByClassName('radio');
+function checkOnlyOne(val, name) {
+    console.log(val)
+    var x = document.querySelectorAll(`input[name=${name}]`); //document.getElementsByClassName('radio');
     var i;
 
     for (i = 0; i < x.length; i++) {
-        if (x[i].value != b) x[i].checked = false;
+        if (x[i].value != val) x[i].checked = false;
     }
 }
 
@@ -86,6 +86,34 @@ function showSelectedAnswer() {
 }
 
 function onSubmit(){
-    var nutrition_wish_understand = document.querySelectorAll('input[name="nutrition_wish_understand"]:checked');
-    var nutritious_meals_yes = document.querySelectorAll('input[name="nutritious_meals"]:checked');
+    //var nutrition_wish_understand = Number(document.querySelectorAll('input[name="nutrition_wish_understand"]:checked')[0].value);
+    //var nutritious_meals_yes = Number(document.querySelectorAll('input[name="nutritious_meals_yes"]:checked')[0].value);
+    
+    //const sub_nutrition_comfort = Number(document.querySelectorAll('input[name="nutrition_comfort"]:checked')[0].value);
+    //console.log(sub_nutrition_comfort)
+
+    var sub_new_food = document.querySelectorAll('input[name="new_food"]:checked');
+    console.log(sub_new_food);
+    // const new_food = sub_new_food[0].value
+    var sub_fruit_vege = document.querySelectorAll('input[name="fruit_vege"]:checked');
+    console.log(sub_fruit_vege);
+    console.log(new_food)
+    /*
+    let brighter_bites = 0, nutrition_course = 0, cooking_class = 0, shopping_tour = 0, texts = 0;
+    brighter_bites = brighter_bites + nutritious_meals_yes
+    nutrition_course = nutrition_course + nutrition_wish_understand + nutrition_comfort_little
+    cooking_class = cooking_class + new_food
+    shopping_tour = shopping_tour + new_food + fruit_vege
+
+    console.log(`BB ${brighter_bites} |  NC ${nutrition_course} | CC ${cooking_class} | ST ${shopping_tour}`)
+    */
+    var answer = "";
+
+    /*
+    for (var i = 0; i < nutrition_comfort_little.length; i++) {
+        answer += nutrition_comfort_little[i].value + " ";
+    }
+
+    document.getElementById("selected-answer").innerHTML = "Selected answer: " + answer;
+    */
 }

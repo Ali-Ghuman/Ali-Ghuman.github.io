@@ -109,25 +109,25 @@
                 <form id="labels-checkbox">
 
                     <label for="nutrition_comfort_little">
-                        <input type="radio" class="radio" id="nutrition_comfort_little" name="nutrition_comfort_little" value="2"
+                        <input type="radio" class="radio" id="nutrition_comfort_little" name="nutrition_comfort" value="2"
                             onclick="checkOnlyOne(this.value)">
                         <span></span>
                     </label>
 
                     <label for="nutrition_comfort_somewhat">
-                        <input type="radio" class="radio" id="nutrition_comfort_somewhat" name="nutrition_comfort_somewhat" value="1"
+                        <input type="radio" class="radio" id="nutrition_comfort_somewhat" name="nutrition_comfort" value="1"
                             onclick="checkOnlyOne(this.value)">
                         <span></span>
                     </label>
 
                     <label for="nutrition_comfort_well">
-                        <input type="radio" class="radio" id="nutrition_comfort_well" name="nutrition_comfort_well" value="0"
+                        <input type="radio" class="radio" id="nutrition_comfort_well" name="nutrition_comfort" value="0"
                             onclick="checkOnlyOne(this.value)">
                         <span></span>
                     </label>
 
                     <label for="nutrition_comfort_very">
-                        <input type="radio" class="radio" id="nutrition_comfort_very" name="nutrition_comfort_very" value="-1"
+                        <input type="radio" class="radio" id="nutrition_comfort_very" name="nutrition_comfort" value="-1"
                             onclick="checkOnlyOne(this.value)">
                         <span></span>
                     </label>
@@ -146,14 +146,14 @@
                 <form id="newfood-mc" class="new-food">
 
                     <label for="new_food_yes">
-                        <input type="checkbox" class="radio" id="new_food_yes" name="new_food_yes" value="1"
-                            onclick="checkOnlyOne(this.value)">
+                        <input type="checkbox" class="radio" id="new_food_yes" name="new_food" value="1"
+                            onclick="checkOnlyOne(this.value, this.name)">
                         <span>Yes</span>
                     </label><br>
 
                     <label for="new_food_no">
-                        <input type="checkbox" class="radio" id="new_food_no" name="new_food_no" value="-1"
-                            onclick="checkOnlyOne(this.value)">
+                        <input type="checkbox" class="radio" id="new_food_no" name="new_food" value="-1"
+                            onclick="checkOnlyOne(this.value, this.name)">
                         <span>No</span>
                     </label><br>
 
@@ -171,31 +171,31 @@
                 <form id="labels-checkbox2">
 
                     <label for="fruit_vege_rarely">
-                        <input type="radio" onclick="checkOnlyOne(this.value)" class="radio" id="fruit_vege_rarely" name="fruit_vege_rarely"
-                            value="2">
+                        <input type="radio" class="radio" id="fruit_vege_rarely" name="fruit_vege" value="2"
+                        onclick="checkOnlyOne(this.value, this.name)">
                         <span></span>
                     </label>
 
                     <label for="fruit_vege_somewhat">
-                        <input type="radio" class="radio" id="fruit_vege_somewhat" name="fruit_vege_somewhat" value="1"
-                            onclick="checkOnlyOne(this.value)">
+                        <input type="radio" class="radio" id="fruit_vege_somewhat" name="fruit_vege" value="1"
+                            onclick="checkOnlyOne(this.value, this.name)">
                         <span></span>
                     </label>
 
                     <label for="fruit_vege_well">
-                        <input type="radio" class="radio" id="fruit_vege_well" name="fruit_vege_well" value="0"
-                            onclick="checkOnlyOne(this.value)">
+                        <input type="radio" class="radio" id="fruit_vege_well" name="fruit_vege" value="0"
+                            onclick="checkOnlyOne(this.value, this.name)">
                         <span></span>
                     </label>
 
                     <label for="fruit_vege_very">
-                        <input type="radio" class="radio" id="fruit_vege_very" name="fruit_vege_very" value="-1"
-                            onclick="checkOnlyOne(this.value)">
+                        <input type="radio" class="radio" id="fruit_vege_very" name="fruit_vege" value="-1"
+                            onclick="checkOnlyOne(this.value, this.name)">
                         <span></span>
                     </label>
 
                 </form>
-                <a id="submit-btn" href="#ch8-container" class="button-37"><b>SUBMIT</b></a>
+                <a id="submit-btn" href="#ch8-container" class="button-37" onclick="onSubmit()"><b>SUBMIT</b></a>
             </div>
     </section>
 
@@ -213,7 +213,6 @@
         </section>
     
     <p id="selected-answer"></p>
-    <a id="submit-btn" href="#ch8-container" class="button-37" onclick="submitForm()" target="_blank"><b>SUBMIT</b></a>
 
 </body>
 
