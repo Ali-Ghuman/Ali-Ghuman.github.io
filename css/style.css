@@ -21,7 +21,7 @@ body {
 }
 
 #main_image {
-    height: 50%;
+    height: 60%;
     width: 50%;
 }
 
@@ -49,8 +49,27 @@ body {
     left: 500px;
     width: 505px;
 }
+#neighborhood-select {
+    background: #55a347;
+    height: 76px;
+    width: 505px;
+    border: solid;
+    border-color: rgb(86, 86, 86);
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 25px;
+    position: absolute;
+    left: 708px;
+    top: 1755px;
+}
 
-input[type="number"] {
+#neighborhood-select option{
+    width: 100px!important; 
+    font-size: 15px!important; 
+}
+
+
+/* input[type="number"] {
     background: #55a347;
     height: 76px;
     width: 505px;
@@ -62,7 +81,7 @@ input[type="number"] {
     position: absolute;
     left: 708px;
     top: 1750px;
-}
+} */
 
 input,
 select,
@@ -81,12 +100,11 @@ input::-webkit-inner-spin-button {
     display: none;
 }
 
-
 #next-btn,
 #next-btn-labels,
 #next-btn-newfoods,
 #next-btn-labels2 {
-    margin-top: 50px; 
+    margin-top: 50px;
     background: green;
     width: 100px;
     height: 50px;
@@ -100,9 +118,8 @@ input::-webkit-inner-spin-button {
     color: white;
 }
 
-
 #submit-btn {
-    margin-top: 50px; 
+    margin-top: 50px;
     background: green;
     width: 125px;
     height: 50px;
@@ -328,7 +345,7 @@ input::-webkit-inner-spin-button {
 #newfood-mc {
     top: 6495px;
     left: 1050px;
-    font-size: 35px; 
+    font-size: 35px;
 }
 
 #nutrition {
@@ -458,3 +475,13 @@ input::-webkit-inner-spin-button {
     background: #0a7e1a;
     border: 0px solid #0a7e1a;
 }
+
+#program {
+    display: flex;
+    justify-content: center;
+}
+
+#neighborhood-result {
+    margin-right: 50px;
+}
+
