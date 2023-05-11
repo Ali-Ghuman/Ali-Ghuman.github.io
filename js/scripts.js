@@ -191,23 +191,23 @@ function onSubmit(){
     // Use a switch statement to display different images based on the variable value
     switch (largest) {
         case "brighter_bites":
-            imgElement.src = "../assets/ch1.png";
+            imgElement.src = "../assets/results/BB.png";
             break;
         case "nutrition_course":
-            imgElement.src = "../assets/ch2.png";
+            imgElement.src = "../assets/results/NC.png";
             break;
         case "cooking_class":
-            imgElement.src = "../assets/ch3.png";
+            imgElement.src = "../assets/resulst/CC.png";
             break;
         case "shopping_tour":
-            imgElement.src = "../assets/ch4.png";
+            imgElement.src = "../assets/results/BB.png";
             break;
         case "texts":
-            imgElement.src = "../assets/ch5.png";
+            imgElement.src = "../assets/results/BB.png";
             break; 
 
         default:
-            imgElement.src = "../assets/ch9.png";
+            imgElement.src = "";
   }
   
 }
