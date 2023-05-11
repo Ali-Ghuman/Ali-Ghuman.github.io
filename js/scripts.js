@@ -197,7 +197,7 @@ function onSubmit(){
             imgElement.src = "../assets/results/NC.png";
             break;
         case "cooking_class":
-            imgElement.src = "../assets/resulst/CC.png";
+            imgElement.src = "../assets/results/CC.png";
             break;
         case "shopping_tour":
             imgElement.src = "../assets/results/BB.png";
