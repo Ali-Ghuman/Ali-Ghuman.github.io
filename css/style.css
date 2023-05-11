@@ -32,11 +32,11 @@ body {
 
 .start-btn {
     position: absolute;
-    left: 1006px;
-    bottom: -197px;
+    left: 890px;
+    bottom: -237px;
     opacity: 0%;
-    width: 240px;
-    height: 60px;
+    width: 500px;
+    height: 200px;
     border: 1px solid;
 }
 
