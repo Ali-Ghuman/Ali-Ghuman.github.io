@@ -490,3 +490,13 @@ input::-webkit-inner-spin-button {
     margin-right: 50px;
 }
 
+#refresh-container {
+display: flex;
+position: absolute;
+justify-content: center;
+align-items: center;
+width: 1920px; 
+top: 9380px; 
+}
+
+
