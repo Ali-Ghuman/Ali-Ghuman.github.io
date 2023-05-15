@@ -147,6 +147,8 @@ function onSubmit(){
     // Neighborhod image;
     let neighborhoodImage = document.getElementById("neighborhood-result")
     neighborhoodImage.src = `assets/neigborhood-plots/${selectedNeighborhood}.png`
+    let resultsInfo = document.getElementById("results-iframe")
+    resultsInfo.src = "https://www.cityharvest.org/"
 
     var nutrition_wish_understand = Number(document.querySelectorAll('input[name="nutrition_wish_understand"]:checked')[0].value);
     var nutritious_meals = Number(document.querySelectorAll('input[name="nutritious_meals"]:checked')[0].value);
@@ -192,15 +194,19 @@ function onSubmit(){
     switch (largest) {
         case "brighter_bites":
             imgElement.src = "../assets/results/BB.png";
+            resultsInfo.src = "https://brighterbites.org/";
             break;
         case "nutrition_course":
             imgElement.src = "../assets/results/NC.png";
+            resultsInfo.src = "https://www.cityharvest.org/programs/nutrition-education-overview/"
             break;
         case "cooking_class":
             imgElement.src = "../assets/results/CC.png";
+            resultsInfo.src = "https://www.cityharvest.org/programs/nutrition-ed-activities/"
             break;
         case "shopping_tour":
             imgElement.src = "../assets/results/BB.png";
+            resultsInfo.src = "https://www.cityharvest.org/programs/nutrition-ed-activities/"
             break;
         case "texts":
             imgElement.src = "../assets/results/BB.png";
